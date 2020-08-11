@@ -3,11 +3,14 @@ import numeral from "numeral";
 import "../styles/Table.css";
 
 function Table({ countries }) {
+  let index = 0;
   return (
     <div className='table'>
       {countries.map(({ country, cases }) => (
         <tr>
-          <td>{country}</td>
+          <td>
+            {++index}. {country}
+          </td>
           <td>
             <strong>{numeral(cases).format("0,0")}</strong>
           </td>
