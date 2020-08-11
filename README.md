@@ -79,6 +79,10 @@ A javascript library for formatting and manipulating numbers.
 
 ## Setting up the project
 
+### `npm install`
+
+Installs the required node_modules to run the app
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
