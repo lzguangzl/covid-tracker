@@ -6,8 +6,8 @@ function Table({ countries }) {
   let index = 0;
   return (
     <div className='table'>
-      {countries.map(({ country, cases }) => (
-        <tr>
+      {countries.map(({ updated, country, cases }) => (
+        <tr key={updated}>
           <td>
             {++index}. {country}
           </td>

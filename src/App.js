@@ -43,6 +43,7 @@ function App() {
         .then((res) => res.json())
         .then((data) => {
           const countries = data.map((country) => ({
+            key: country.updated,
             name: country.country,
             value: country.countryInfo.iso2,
           }));
@@ -90,7 +91,9 @@ function App() {
             >
               <MenuItem value='worldwide'>Worldwide</MenuItem>
               {countries.map((country) => (
-                <MenuItem value={country.value}>{country.name}</MenuItem>
+                <MenuItem key={country.key} value={country.value}>
+                  {country.name}
+                </MenuItem>
               ))}
             </Select>
           </FormControl>
